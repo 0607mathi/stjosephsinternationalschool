@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+/* Header section */
+header{
+    background-color:#FD5490;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.School-title{
+    font-family: "Alfa Slab One", serif;
+    color: aliceblue;
+    font-size: 22px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Averia Gruesa Libre";
+    font-size: 18px;
+    padding: 5px;
+}
+
+nav ul li a:hover{
+    scale: 1.1;
+    border-radius: 7px;
+    background-color: #fff;
+    color: #FD5490;
+}
+
+/* Banner */
+.School-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.School-banner img{
+    width: 95%;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.School-banner img:hover{
+    scale: 1.005;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+}
+
+.School-banner img:hover{
+    scale: 1.005;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+}
+
+/* About */
+.About-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sub-heading{
+    font-family: "Changa One", sans-serif;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    font-size: 26px;
+    color: #FD5490;
+    padding: 5px 7px;
+    margin-bottom: 20px;
+}
+
+.sub-heading:hover{
+    cursor: pointer;
+    background-color: #FD5490;
+    color: aliceblue;
+}
+
+.boxes{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.left-box{
+    width: 20%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0px 0px 20px;
+}
+.left-box:hover{
+    scale: 1.005;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+}
+
+
+.right-box{
+    width: 60%;
+    background: #FD5490;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.right-box p{
+    color: aliceblue;
+    font-family: "Poppins";
+}
+
+.right-box:hover{
+    scale: 1.005;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+}
+
+/* Admission */
+.Admission-section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.grades{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}   
+
+.box{
+    width: 270px;
+    height: 150px;
+    background: #FD5490;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: "Changa One", sans-serif;
+    border-radius: 10px;
+}
+
+.box:hover{
+    background-color: #ffffff;
+    color: #FD5490;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+    scale: 1.008;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+    header{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .boxes{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .left-box,
+    .right-box{
+        width: 100%;
+    }
+
+    .left-box img{
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .School-banner img{
+        height: auto;
+    }
+
+    .boxes{
+        flex-direction: row;
+    }
+
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .box{
+        width: 45%;
+        height: 120px;
+    }
+
+    .left-box{
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .right-box{
+        border-radius: 0px 20px 20px 0px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px){
+
+    nav{
+        display: none;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .boxes{
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+    }
+
+    .School-title{
+        font-size: 16px;
+        text-align: center;
+    }
+    .left-box{
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .right-box{
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .right-box p{
+        font-size: 14px;
+    }
+}
