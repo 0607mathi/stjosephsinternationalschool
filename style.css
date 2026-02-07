@@ -98,6 +98,11 @@ nav ul li a:hover{
 }
 
 .sub-heading:hover{
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+    cursor: pointer;
+}
+
+.sub-heading:hover{
     cursor: pointer;
     background-color: #FD5490;
     color: aliceblue;
@@ -154,6 +159,10 @@ nav ul li a:hover{
     align-items: center;
     gap: 10px;
     flex-direction: column;
+}
+
+.container:hover{
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
 }
 
 .container h3{
@@ -220,6 +229,68 @@ box-shadow: 0px 0px 5px aliceblue;
     width: 100%;
 }
 
+.our-features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.Our-fea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Our-fea h2{
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #FD5490;
+    display: inline;
+     font-family: "Alfa Slab One", serif;
+     margin-bottom: 20px;
+     font-weight: 100;
+}
+
+.Our-fea h2:hover{
+    background-color: #FD5490;
+    color: aliceblue;
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+    cursor: pointer;
+}
+
+.our-features .Teachers{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap:10px;
+    width: fit-content;
+    padding:20px 20px;
+    background-color:#FD5490;
+    /* margin-left: 5%; */
+    border-radius: 20px;
+}
+
+.our-features .Teachers:hover{
+    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+    cursor: pointer;
+}
+
+.our-features .Teachers img{
+    width:350px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: black;
+    border: 5px solid aliceblue;
+}   
+
+.our-features .Teachers h3{
+    color: aliceblue;
+    font-size: 16px;
+    text-align: center;
+}
 /* Admission */
 .Admission-section{
     margin-top: 30px;
@@ -289,6 +360,9 @@ box-shadow: 0px 0px 5px aliceblue;
 
 /* Mobile */
 @media (max-width: 768px){
+    body{
+        background-color: green;
+    }
     nav ul{
         flex-direction: row;
         gap: 10px;
@@ -329,10 +403,14 @@ box-shadow: 0px 0px 5px aliceblue;
         height: auto;
         padding-left: 10% ;
     }
+
+    
 }
+
 
 /* Small Mobile */
 @media (max-width: 480px){
+
 
     nav{
         display: none;
@@ -355,12 +433,24 @@ box-shadow: 0px 0px 5px aliceblue;
     .left-box{
         border-radius: 20px 20px 0px 0px;
     }
-
+    
     .right-box{
         border-radius: 0px 0px 20px 20px;
     }
 
     .right-box p{
         font-size: 14px;
+    }
+
+    .Teachers{
+        padding: 5px 5px;
+    }
+
+    .our-features .Teachers img{
+        width: 300px;
+    }
+
+    .our-features .Teachers h3{
+        font-size: 12px;
     }
 }
