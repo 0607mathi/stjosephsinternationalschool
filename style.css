@@ -360,9 +360,7 @@ box-shadow: 0px 0px 5px aliceblue;
 
 /* Mobile */
 @media (max-width: 768px){
-    body{
-        background-color: green;
-    }
+    
     nav ul{
         flex-direction: row;
         gap: 10px;
