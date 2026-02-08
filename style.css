@@ -18,6 +18,7 @@ header{
     align-items: center;
     padding: 0 20px;
     border-radius: 0 0 10px 10px;
+    position: relative; /* For hamburger menu positioning */
 }
 
 .School-title{
@@ -71,10 +72,16 @@ nav ul li a:hover{
     box-shadow: 0px 0px 10px rgb(222, 99, 120);
 }
 
-.School-banner img:hover{
-    scale: 1.005;
+/* Hamburger Menu */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgb(222, 99, 120);
+    font-size: 24px;
+    color: aliceblue;
 }
 
 /* About */
@@ -99,10 +106,6 @@ nav ul li a:hover{
 
 .sub-heading:hover{
     box-shadow: 0px 0px 10px rgb(222, 99, 120);
-    cursor: pointer;
-}
-
-.sub-heading:hover{
     cursor: pointer;
     background-color: #FD5490;
     color: aliceblue;
@@ -259,6 +262,10 @@ box-shadow: 0px 0px 5px aliceblue;
     cursor: pointer;
 }
 
+.our-labs-heading {
+    margin-top: 30px;
+}
+
 .our-features .Teachers{
     overflow: hidden;
     display: flex;
@@ -338,117 +345,155 @@ box-shadow: 0px 0px 5px aliceblue;
 /* Tablet */
 @media (max-width: 1024px){
     header{
-        flex-direction: column;
         height: auto;
-        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #FD5490;
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav ul li a {
+        display: block;
+        padding: 15px;
+        text-align: center;
     }
 
     .boxes{
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .left-box,
     .right-box{
-        width: 100%;
+        width: 90%;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .right-box{
+        border-radius: 0 0 20px 20px;
     }
 
     .left-box img{
-        width: 80%;
+        width: 40%;
+        padding: 20px;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px){
-    
-    nav ul{
-        flex-direction: row;
-        gap: 10px;
+
+    header {
+        justify-content: space-between;
     }
 
+    .menu-icon {
+        display: block;
+        z-index: 1001; /* Ensure it's on top */
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #FD5490;
+        z-index: 1000;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+    
     .School-banner img{
         height: auto;
-    }
-
-    .boxes{
-        flex-direction: row;
     }
 
     .row{
         flex-wrap: wrap;
     }
 
-    .box{
-        width: 45%;
+    .row .box{
+        width: 48%;
         height: 120px;
     }
-
-    .left-box{
-        border-radius: 20px 0px 0px 20px;
-    }
-
-    .right-box{
-        border-radius: 0px 20px 20px 0px;
-    }
-
+    
     .features{
         padding-bottom: 2%;
         flex-direction: column;
+        align-items: center;
+    }
+    .features .box{
+        width: 90%;
     }
 
     .features .content{
-        width: fit-content;
+        width: 100%;
         height: auto;
-        padding-left: 10% ;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
     }
-
-    
 }
 
 
 /* Small Mobile */
 @media (max-width: 480px){
 
-
-    nav{
-        display: none;
-    }
-
-    .box{
-        width: 100%;
-    }
-
-    .boxes{
-         flex-direction: column;
-         justify-content: center;
-         text-align: center;
-    }
-
     .School-title{
         font-size: 16px;
-        text-align: center;
     }
-    .left-box{
-        border-radius: 20px 20px 0px 0px;
+
+    .row .box{
+        width: 100%;
     }
     
-    .right-box{
-        border-radius: 0px 0px 20px 20px;
-    }
-
     .right-box p{
         font-size: 14px;
-    }
-
-    .Teachers{
-        padding: 5px 5px;
+        text-align: center;
     }
 
     .our-features .Teachers img{
-        width: 300px;
+        width: 100%;
     }
 
     .our-features .Teachers h3{
-        font-size: 12px;
+        font-size: 14px;
     }
 }
