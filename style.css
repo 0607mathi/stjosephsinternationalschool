@@ -345,7 +345,7 @@ box-shadow: 0px 0px 5px aliceblue;
     align-items: center;
 }  
 
-.box{
+.grades .box{
     margin:0.7%;
     width: 270px;
     height: 150px;
@@ -358,17 +358,17 @@ box-shadow: 0px 0px 5px aliceblue;
     border-radius: 10px;
 }
 
-.box .grade{
+.grades .box .grade{
      font-size: 24px;
      font-family: "Changa One", sans-serif;
 }
 
-.box img{
+.grades .box img{
     width: 30px;
     margin-right: 10px;
 }
 
-.box a{
+.grades .box a{
     text-decoration: none;
     color: aliceblue;
     background-color: #FD5490;
@@ -383,7 +383,7 @@ box-shadow: 0px 0px 5px aliceblue;
     box-shadow: 0px 0px 10px rgb(222, 99, 120);
 }
 
-
+.grades{
   .box:hover {
     .img-icon,
     .grade,
@@ -391,14 +391,16 @@ box-shadow: 0px 0px 5px aliceblue;
       display: none;
     }
   }
+}
 
-  .box:hover {
+.grades{  
+    .box:hover {
     a {
       display: block;
     }
   }
-
-.box:hover{
+}
+.grades .box:hover{
     background-color: #ffffff;
     color: #FD5490;
     box-shadow: 0px 0px 10px rgb(222, 99, 120);
@@ -513,7 +515,7 @@ box-shadow: 0px 0px 5px aliceblue;
         gap: 10px;
     }
 
-    .box{
+    .grades .box{
         width: 40%;
         height: 120px;
     }
@@ -544,7 +546,7 @@ box-shadow: 0px 0px 5px aliceblue;
         font-size: 16px;
     }
 
-    .box{
+    .grades .box{
         width: 80%;
     }
     
@@ -553,8 +555,13 @@ box-shadow: 0px 0px 5px aliceblue;
         text-align: center;
     }
 
+    .our-features .Teachers{
+        padding: 10px;
+    }
+
+
     .our-features .Teachers img{
-        width: 100%;
+        width: 280px;
     }
 
     .our-features .Teachers h3{
